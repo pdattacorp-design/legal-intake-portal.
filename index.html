@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intake Portal | Legal Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Legal Services Intake Portal</h1>
+        <p>Please provide your particulars below to initiate the preliminary conflict check and matter review.</p>
+    </header>
+
+    <main>
+        <form action="https://formspree.io/f/your-id-here" method="POST">
+            
+            <fieldset>
+                <legend>1. Prospective Client Particulars</legend>
+                
+                <label for="full-name">Full Legal Name</label>
+                <input type="text" id="full-name" name="client_name" placeholder="As it appears on government ID" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="_replyto" placeholder="name@example.com" required>
+
+                <label for="phone">Telephone Number</label>
+                <input type="tel" id="phone" name="phone_number">
+            </fieldset>
+
+            <fieldset>
+                <legend>2. Conflict Check & Matter Details</legend>
+                
+                <label for="adverse-party">Opposing Party / Adverse Party</label>
+                <input type="text" id="adverse-party" name="adverse_party" placeholder="Full name of individual or company" required>
+
+                <label for="matter-type">Nature of Legal Matter</label>
+                <select id="matter-type" name="matter_type" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="civil">Civil Litigation (Small Claims)</option>
+                    <option value="tribunal">Administrative Tribunal (LTB/WSIB)</option>
+                    <option value="provincial-offences">Provincial Offences</option>
+                    <option value="employment">Employment Law</option>
+                    <option value="other">Other Inquiry</option>
+                </select>
+
+                <label for="summary">Brief Summary of Matter</label>
+                <textarea id="summary" name="matter_summary" rows="6" placeholder="Please provide a concise overview of the dispute..." required></textarea>
+            </fieldset>
+
+            <input type="hidden" name="_subject" value="New Intake Submission - Conflict Check Required">
+            
+            <button type="submit">Submit for Review</button>
+        </form>
+
+        <section class="disclaimer">
+            <p><strong>Notice:</strong> The submission of this form does not create a paralegal-client relationship or a formal retainer. Confidentiality is not guaranteed until a conflict check is cleared and a written agreement is executed. Please refrain from submitting privileged documents through this portal.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Legal Services. All communications are strictly handled in accordance with professional conduct requirements.</p>
+    </footer>
+
+</body>
+</html>
